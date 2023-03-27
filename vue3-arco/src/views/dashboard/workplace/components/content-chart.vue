@@ -1,5 +1,5 @@
 <template>
-  <a-spin :loading="loading" style="width: 100%">
+  <a-spin :loading="loading" style="width: 100%" dot>
     <a-card
       class="general-card"
       :header-style="{ paddingBottom: 0 }"

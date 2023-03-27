@@ -32,7 +32,7 @@
 
     .banner {
       width: 550px;
-      background: linear-gradient(163.85deg, #1d2129 0%, #00308f 100%);
+      background: linear-gradient(163.85deg, rgb(var(--arcoblue-5)) 0%, rgb(var(--arcoblue-7)) 100%);
     }
 
     .content {
@@ -69,12 +69,15 @@
   }
 </style>
 
+
 <style lang="less" scoped>
   // responsive
-  @media (max-width: @screen-lg) {
+  @media (max-width: @screen-sm) {
     .container {
+      flex-direction: column;
       .banner {
-        width: 25%;
+        width: 100%;
+        height: 25%;
       }
     }
   }
