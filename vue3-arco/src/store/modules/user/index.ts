@@ -56,16 +56,15 @@ const useUserStore = defineStore('user', {
     // Get user's information
     async info() {
       const res = await getUserInfo();
-      console.log(res)
-      // this.setInfo(res.data);
+
+      this.setInfo(res.data);
     },
 
     // Login
     async login(loginForm: LoginData) {
       try {
         const res = await userLogin(loginForm);
-        console.log(res)
-        setToken(res.access_token);
+        setToken(res.data.token);
       } catch (err) {
         clearToken();
         throw err;
@@ -81,7 +80,7 @@ const useUserStore = defineStore('user', {
     // Logout
     async logout() {
       try {
-        // await userLogout();
+        await userLogout();
       } finally {
         this.logoutCallBack();
       }

@@ -8,7 +8,7 @@ import { MockParams } from '@/types/mock';
 import { isLogin } from '@/utils/auth';
 
 setupMock({
-  mock:false,
+  mock:true,
   setup() {
     // Mock.XHR.prototype.withCredentials = true;
 
